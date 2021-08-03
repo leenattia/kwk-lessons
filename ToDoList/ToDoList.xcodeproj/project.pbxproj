@@ -18,6 +18,7 @@
 		BD1546F426B835EC006F6BE2 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1546F326B835EC006F6BE2 /* ToDoTableViewController.swift */; };
 		BD1546F626B836FF006F6BE2 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1546F526B836FF006F6BE2 /* ToDo.swift */; };
 		BD1546F826B84C67006F6BE2 /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1546F726B84C67006F6BE2 /* AddToDoViewController.swift */; };
+		BD1546FA26B9872A006F6BE2 /* CompletedToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1546F926B9872A006F6BE2 /* CompletedToDoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		BD1546F326B835EC006F6BE2 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		BD1546F526B836FF006F6BE2 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		BD1546F726B84C67006F6BE2 /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
+		BD1546F926B9872A006F6BE2 /* CompletedToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedToDoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				BD1546F326B835EC006F6BE2 /* ToDoTableViewController.swift */,
 				BD1546F526B836FF006F6BE2 /* ToDo.swift */,
 				BD1546F726B84C67006F6BE2 /* AddToDoViewController.swift */,
+				BD1546F926B9872A006F6BE2 /* CompletedToDoViewController.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				BD1546C126B8327A006F6BE2 /* AppDelegate.swift in Sources */,
 				BD1546F626B836FF006F6BE2 /* ToDo.swift in Sources */,
 				BD1546F426B835EC006F6BE2 /* ToDoTableViewController.swift in Sources */,
+				BD1546FA26B9872A006F6BE2 /* CompletedToDoViewController.swift in Sources */,
 				BD1546C326B8327A006F6BE2 /* SceneDelegate.swift in Sources */,
 				BD1546F826B84C67006F6BE2 /* AddToDoViewController.swift in Sources */,
 				BD1546CB26B8327A006F6BE2 /* ToDoList.xcdatamodeld in Sources */,
