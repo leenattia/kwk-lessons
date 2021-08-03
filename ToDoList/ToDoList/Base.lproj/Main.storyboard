@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cEH-PW-NHf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ck3-Fd-KwH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -32,45 +32,89 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="To Do List" id="64S-u9-rfY">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YsF-Ta-I6q"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="YsF-Ta-I6q">
+                            <connections>
+                                <segue destination="QmB-db-FBe" kind="show" id="uJh-BW-Wpa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="esd-dB-lz2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="840.57971014492762" y="82.366071428571431"/>
+            <point key="canvasLocation" x="1750.7246376811595" y="82.366071428571431"/>
         </scene>
-        <!--View Controller-->
+        <!--Add To Do View Controller-->
         <scene sceneID="76P-wH-Yss">
             <objects>
-                <viewController id="QmB-db-FBe" sceneMemberID="viewController">
+                <viewController id="QmB-db-FBe" customClass="AddToDoViewController" customModule="ToDoList" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Va5-QM-mYD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Write task below:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a8y-I7-pRh">
+                                <rect key="frame" x="141" y="217" width="131" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JA6-l0-vAw">
+                                <rect key="frame" x="107" y="263" width="199" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whg-tN-ED1">
+                                <rect key="frame" x="174" y="541" width="68" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="add to list"/>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="QmB-db-FBe" eventType="touchUpInside" id="nDl-Y2-Z1F"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="is this task important?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMJ-B0-2Uf">
+                                <rect key="frame" x="124" y="404" width="168" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NA7-6T-ddd">
+                                <rect key="frame" x="183" y="451" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="J5k-sm-8zl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="nKl-xR-taC"/>
+                    <connections>
+                        <outlet property="descriptionInput" destination="JA6-l0-vAw" id="TiM-PM-pOO"/>
+                        <outlet property="switchInput" destination="NA7-6T-ddd" id="LLZ-Ya-Lgu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJP-dn-KL4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1649" y="82"/>
+            <point key="canvasLocation" x="2557.971014492754" y="81.696428571428569"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="hKs-kb-J7A">
+        <scene sceneID="K6c-Zo-Bem">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6fj-em-qsJ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ck3-Fd-KwH" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S7g-76-V39">
+                    <navigationItem key="navigationItem" id="8j3-I6-Kji"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YJS-Hv-xJP">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="cEH-PW-NHf" kind="relationship" relationship="rootViewController" id="XSh-Um-Vja"/>
+                        <segue destination="cEH-PW-NHf" kind="relationship" relationship="rootViewController" id="IDN-ad-Tkk"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eDu-Re-8c9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PG1-Lq-UE7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1" y="82"/>
+            <point key="canvasLocation" x="840.57971014492762" y="82.366071428571431"/>
         </scene>
     </scenes>
     <resources>
